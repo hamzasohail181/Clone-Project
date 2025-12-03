@@ -3,88 +3,63 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BrandClone Advanced</title>
+  <title>ShopMaster - Advanced eCommerce</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <!-- Header -->
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="#">BrandClone</a>
+      <a href="#" class="brand">ShopMaster</a>
       <nav class="nav" id="nav">
         <a href="#">Home</a>
-        <a href="#">Features</a>
-        <a href="#">Pricing</a>
+        <a href="#">Shop</a>
+        <a href="#">About</a>
         <a href="#">Contact</a>
       </nav>
       <div class="header-actions">
-        <button class="btn-primary header-cta">Try Free</button>
-        <button class="hamburger" id="hamburger" aria-label="Open menu">☰</button>
+        <button id="cartBtn" class="btn-cart">🛒 <span id="cartCount">0</span></button>
+        <button class="hamburger" id="hamburger">☰</button>
       </div>
     </div>
   </header>
 
-  <!-- Hero -->
+  <!-- Hero Section -->
   <section class="hero">
     <div class="container hero-inner">
       <div class="hero-text">
-        <h1>Build stunning web experiences</h1>
-        <p>Fully responsive, pixel-perfect clone starter with modern animations and smooth interactions.</p>
-        <div class="hero-buttons">
-          <button class="btn-primary" id="openModal">Get Started</button>
-          <button class="btn-ghost">Learn More</button>
-        </div>
+        <h1>Discover the Best Products</h1>
+        <p>High-quality items delivered to your doorstep.</p>
+        <button class="btn-primary">Shop Now</button>
       </div>
       <div class="hero-image">
-        <img src="https://images.unsplash.com/photo-1523473827532-3a92f41bcb5b?w=1200&q=60&auto=format&fit=crop" alt="Hero Image">
+        <img src="images/hero.jpg" alt="Shop Hero">
       </div>
     </div>
   </section>
 
-  <!-- Features -->
-  <section class="cards container">
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=60&auto=format&fit=crop" alt="Feature 1">
-      <h3>Feature One</h3>
-      <p>Powerful tools that make development faster and smoother.</p>
-      <a class="card-link" href="#">Explore</a>
-    </article>
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1497493292307-31c376b6e479?w=800&q=60&auto=format&fit=crop" alt="Feature 2">
-      <h3>Feature Two</h3>
-      <p>Seamless integrations with modern frameworks and APIs.</p>
-      <a class="card-link" href="#">Explore</a>
-    </article>
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=60&auto=format&fit=crop" alt="Feature 3">
-      <h3>Feature Three</h3>
-      <p>Optimized for performance and accessibility on all devices.</p>
-      <a class="card-link" href="#">Explore</a>
-    </article>
+  <!-- Products Section -->
+  <section class="products container" id="products">
+    <!-- JS will dynamically render products here -->
   </section>
+
+  <!-- Cart Modal -->
+  <div id="cartModal" class="modal" aria-hidden="true">
+    <div class="modal-content">
+      <button class="modal-close" id="closeCart">✕</button>
+      <h2>Your Cart</h2>
+      <ul id="cartItems"></ul>
+      <p id="cartTotal"></p>
+      <button class="btn-primary" id="checkoutBtn">Checkout</button>
+    </div>
+  </div>
 
   <!-- Footer -->
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© <span id="year"></span> BrandClone. All rights reserved.</p>
-      <div class="footer-links">
-        <a href="#">Privacy</a>
-        <a href="#">Terms</a>
-        <a href="#">Contact</a>
-      </div>
+    <div class="container">
+      <p>© <span id="year"></span> ShopMaster. All rights reserved.</p>
     </div>
   </footer>
-
-  <!-- Modal -->
-  <div id="modal" class="modal" aria-hidden="true">
-    <div class="modal-content">
-      <button class="modal-close" id="closeModal">✕</button>
-      <h2>Start your free trial</h2>
-      <p>Enter your email to get started.</p>
-      <input type="email" placeholder="you@example.com" id="emailInput" />
-      <button class="btn-primary" id="submitEmail">Start</button>
-    </div>
-  </div>
 
   <script src="script.js"></script>
 </body>
