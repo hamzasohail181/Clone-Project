@@ -3,64 +3,101 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ShopMaster - Advanced eCommerce</title>
+  <title>Modern Web Experience</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="#" class="brand">ShopMaster</a>
-      <nav class="nav" id="nav">
-        <a href="#">Home</a>
-        <a href="#">Shop</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-      </nav>
-      <div class="header-actions">
-        <button id="cartBtn" class="btn-cart">🛒 <span id="cartCount">0</span></button>
-        <button class="hamburger" id="hamburger">☰</button>
-      </div>
-    </div>
-  </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="container hero-inner">
-      <div class="hero-text">
-        <h1>Discover the Best Products</h1>
-        <p>High-quality items delivered to your doorstep.</p>
-        <button class="btn-primary">Shop Now</button>
-      </div>
-      <div class="hero-image">
-        <img src="images/hero.jpg" alt="Shop Hero">
-      </div>
-    </div>
-  </section>
-
-  <!-- Products Section -->
-  <section class="products container" id="products">
-    <!-- JS will dynamically render products here -->
-  </section>
-
-  <!-- Cart Modal -->
-  <div id="cartModal" class="modal" aria-hidden="true">
-    <div class="modal-content">
-      <button class="modal-close" id="closeCart">✕</button>
-      <h2>Your Cart</h2>
-      <ul id="cartItems"></ul>
-      <p id="cartTotal"></p>
-      <button class="btn-primary" id="checkoutBtn">Checkout</button>
+<!-- Header -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="#" class="brand">ModernSite</a>
+    <nav class="nav" id="nav">
+      <a href="#home">Home</a>
+      <a href="#features">Features</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button id="themeToggle" class="btn-ghost">🌙</button>
+      <button class="hamburger" id="hamburger">☰</button>
     </div>
   </div>
+</header>
 
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="year"></span> ShopMaster. All rights reserved.</p>
+<!-- Hero Section -->
+<section class="hero" id="home">
+  <div class="container hero-inner">
+    <div class="hero-text">
+      <h1>Modern, Interactive & Responsive Website</h1>
+      <p>Experience smooth animations, clean design, and advanced interactivity.</p>
+      <div class="hero-buttons">
+        <button class="btn-primary" id="openModal">Get Started</button>
+        <button class="btn-ghost">Learn More</button>
+      </div>
     </div>
-  </footer>
+    <div class="hero-image">
+      <img src="https://images.unsplash.com/photo-1523473827532-3a92f41bcb5b?w=1200&q=60&auto=format&fit=crop" alt="Hero Image">
+    </div>
+  </div>
+</section>
 
-  <script src="script.js"></script>
+<!-- Features Section -->
+<section class="features container" id="features">
+  <h2 class="section-title">Our Features</h2>
+  <div class="feature-cards">
+    <article class="card">
+      <h3>Responsive Design</h3>
+      <p>Fully optimized for all devices with smooth layouts.</p>
+    </article>
+    <article class="card">
+      <h3>Interactive Elements</h3>
+      <p>Modals, sliders, and animations enhance the user experience.</p>
+    </article>
+    <article class="card">
+      <h3>Modern UI</h3>
+      <p>Clean and professional design with hover effects.</p>
+    </article>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section class="services container" id="services">
+  <h2 class="section-title">Our Services</h2>
+  <div class="service-cards">
+    <article class="card">
+      <h3>Web Development</h3>
+      <p>Custom websites built with modern technologies.</p>
+    </article>
+    <article class="card">
+      <h3>UI/UX Design</h3>
+      <p>Beautiful, user-friendly interfaces for all platforms.</p>
+    </article>
+    <article class="card">
+      <h3>Consulting</h3>
+      <p>Expert advice to improve your digital presence.</p>
+    </article>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer" id="contact">
+  <div class="container footer-inner">
+    <p>© <span id="year"></span> ModernSite. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Modal -->
+<div id="modal" class="modal" aria-hidden="true">
+  <div class="modal-content">
+    <button class="modal-close" id="closeModal">✕</button>
+    <h2>Start Your Journey</h2>
+    <p>Enter your email to get started.</p>
+    <input type="email" placeholder="you@example.com" id="emailInput">
+    <button class="btn-primary" id="submitEmail">Start</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
