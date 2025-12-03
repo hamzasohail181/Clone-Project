@@ -37,10 +37,11 @@
       </div>
     </div>
     <div class="hero-image">
-      <img src="https://images.unsplash.com/photo-1605902711622-cfb43c443f0d?crop=entropy&cs=tinysrgb&fit=max&w=1200&q=80" alt="Hero Image">
+      <img src="https://images.unsplash.com/photo-1581091870626-3f0d3c50c5c1?crop=entropy&cs=tinysrgb&fit=max&w=1200&q=80" alt="Hero Tech Image">
     </div>
   </div>
 </section>
+
 
 <!-- Features Section -->
 <section class="features container" id="features">
@@ -57,7 +58,7 @@
       <p>Modals, sliders, and animations enhance the user experience.</p>
     </article>
     <article class="card">
-      <img src="https://images.unsplash.com/photo-1581090700227-0d129d8eb6f1?crop=entropy&cs=tinysrgb&fit=max&w=400&q=80" alt="Modern UI">
+      <img src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?crop=entropy&cs=tinysrgb&fit=max&w=400&q=80" alt="Modern UI">
       <h3>Modern UI</h3>
       <p>Clean and professional design with hover effects.</p>
     </article>
@@ -69,7 +70,7 @@
   <h2 class="section-title">Our Services</h2>
   <div class="service-cards">
     <article class="card">
-      <img src="https://images.unsplash.com/photo-1581091215361-88b44c1c4d0a?crop=entropy&cs=tinysrgb&fit=max&w=400&q=80" alt="Web Development">
+      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?crop=entropy&cs=tinysrgb&fit=max&w=400&q=80" alt="Web Development">
       <h3>Web Development</h3>
       <p>Custom websites built with modern technologies.</p>
     </article>
@@ -104,6 +105,38 @@
   </div>
 </div>
 
-<script src="script.js"></script>
+<script>
+  // Hamburger Menu
+  const hamburger = document.getElementById('hamburger');
+  const nav = document.getElementById('nav');
+  hamburger.addEventListener('click', () => nav.classList.toggle('nav--active'));
+
+  // Modal
+  const modal = document.getElementById('modal');
+  const openModalBtn = document.getElementById('openModal');
+  const closeModalBtn = document.getElementById('closeModal');
+  openModalBtn.addEventListener('click', () => modal.setAttribute('aria-hidden','false'));
+  closeModalBtn.addEventListener('click', () => modal.setAttribute('aria-hidden','true'));
+  modal.addEventListener('click', e => { if(e.target === modal) modal.setAttribute('aria-hidden','true'); });
+
+  // Modal Email Demo
+  document.getElementById('submitEmail').addEventListener('click', () => {
+    const email = document.getElementById('emailInput').value.trim();
+    if(!email) return alert('Please enter an email');
+    alert(`Thanks! (demo) — ${email}`);
+    modal.setAttribute('aria-hidden','true');
+  });
+
+  // Dark Mode Toggle
+  const themeToggle = document.getElementById('themeToggle');
+  themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    themeToggle.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
+  });
+
+  // Footer Year
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
